@@ -19,7 +19,8 @@
 	<passive description="Intensifying Madness" gfx="questionmark.png" name="Tunnel Vision"/>
 	<passive cache = "damage" description="Damage Down + Damage Up" gfx="Collectible_The_Quantum_Rock.png" name="Quantum Rock"/>
 	<passive description="Treasure Awaits" gfx="Collectible_Toothess_Key.png" name="Toothless Key"/>
-	<passive description="Worms = Power" gfx="questionmark.png" name="Worm Box"/>
+	<passive description="Worms = Power" gfx="questionmark.png" name="Worm Farm"/>
+	<passive description="Where did they go?" gfx="questionmark.png" name="Opened Can of Worms"/>
 	<active name="Black Runestone" description="Sacrifice Everything" gfx="questionmark.png" maxcharges="0"/>
 	<active name="Dead Metal Detector" description="Finds Treasure" gfx="questionmark.png" maxcharges="3"/>
 	<trinket description="Cursed" gfx="trinket_dead_beetle.png" name="Dead Beetle" />

@@ -43,9 +43,10 @@ local	belt_item = Isaac.GetItemIdByName("White Belt")
 local   hyperfocus_item = Isaac.GetItemIdByName("Tunnel Vision")
 local	quantumrock_item = Isaac.GetItemIdByName("Quantum Rock")
 local	toothless_item = Isaac.GetItemIdByName("Toothless Key")
-local	wormbox_item = Isaac.GetItemIdByName("Worm Box")
+local	wormbox_item = Isaac.GetItemIdByName("Worm Farm")
 local	runestone_item = Isaac.GetItemIdByName("Black Runestone")
 local	metaldetect_item = Isaac.GetItemIdByName("Dead Metal Detector")
+local	wormcan_item = Isaac.GetItemIdByName("Opened Can of Worms")
 
 
 
@@ -144,6 +145,7 @@ local o_pool_scope = {Value = function() return 10 end}
 local o_pool_quantum = {Value = function() return 10 end}
 local o_pool_toothless = {Value = function() return 10 end}
 local o_pool_wormbox = {Value = function() return 9 end}
+local o_pool_wormcan = {Value = function() return 9 end}
 local o_pool_modded = {Value = function() return 8 end}
 
 local o_tomb_procChance = {Value = function() return 0.33 end}--chance for rooms to reset through tomb of the curse
@@ -709,7 +711,8 @@ local function BuildLimboPool()
 		{scope_item, o_pool_scope:Value()},
 		{quantumrock_item, o_pool_quantum:Value()},
 		{toothless_item, o_pool_toothless:Value()},
-		{wormbox_item, o_pool_wormbox:Value()}
+		{wormbox_item, o_pool_wormbox:Value()},
+		{wormcan_item, o_pool_wormcan:Value()}
 	}
 	local eternalcurse = Isaac.GetCurseIdByName("Curse of Eternity")
 	if eternalcurse ~= nil and eternalcurse > 0 then
@@ -952,7 +955,7 @@ local mapSec = false
 local confusionChance = {Value = function() return 0.2 end}
 local confusionChanceModifier = 0
 
-local nailChance = {Value = function() return 0.05 end}
+local nailChance = {Value = function() return 0.04 end}
 
 local confusionEffects = {
 	{TearFlags.TEAR_CONFUSION, 16},
@@ -1293,6 +1296,19 @@ function mod:MC_POST_UPDATE()
 		Isaac.Spawn(5, PickupVariant.PICKUP_TRINKET, TrinketType.TRINKET_STORE_KEY, pos, Vector(0, 0), nil)
 		builtdeal = true
 	end
+	
+	local actitem = player:GetActiveItem()
+	if activelimbotracker[actitem] and not player:IsHoldingItem() then
+		if actitem == metaldetect_item then
+			if player:GetActiveCharge() == 0 then
+				activelimbotracker[actitem] = false
+			end
+			player:SetActiveCharge(0)
+		else
+			activelimbotracker[actitem] = false
+		end
+	end
+	
 	
 	if player:HasCollectible(battery_item) and not batblok then
 		if player:GetActiveItem() ~= nil and player:GetActiveItem() > 0 then
@@ -1898,6 +1914,9 @@ local function OnNewGame()
 	activelimbotracker[head_item] = true;
 	activelimbotracker[runestone_item] = true;
 	activelimbotracker[metaldetect_item] = true;
+	limbochestactivepool = {
+		metaldetect_item
+	}
 end
 
 local ValidLimboRooms = {}
@@ -2101,7 +2120,7 @@ function mod:MC_POST_TEAR_INIT(tear)
 			end
 		end
 		if player:HasTrinket(nail_trinket) then
-			if (player:IsInvincible() and tear.SpawnerType == EntityType.ENTITY_PLAYER) or rng:RandomFloat() < nailChance:Value() * player:GetTrinketMultiplier() then
+			if ((player:IsInvincible() or player:HasInvincibility() or player:GetDamageCooldown() > 0) and tear.SpawnerType == EntityType.ENTITY_PLAYER) or rng:RandomFloat() < nailChance:Value() * player:GetTrinketMultiplier() then
 				tear:ChangeVariant(TearVariant.NAIL)
 				tear:ChangeVariant(TearVariant.FIRE_MIND)
 				if not hasbit(tear.TearFlags, TearFlags.TEAR_PIERCING) then
@@ -2142,15 +2161,15 @@ function mod:MC_POST_TEAR_INIT(tear)
 	end
 	if player:HasCollectible(wormbox_item) then
 		if (tear.SpawnerType == EntityType.ENTITY_PLAYER or (tear.SpawnerType == EntityType.ENTITY_FAMILIAR and tear.SpawnerVariant == incubusVariant)) then
-			if rng:RandomFloat() < confusionChance:Value() * 0.3 then
-				local rand = rng:RandomInt(1,7)
+			if rng:RandomFloat() < confusionChance:Value() * 0.35 then
+				local rand = rng:RandomInt(7)
 				local w = wormList[rand];
 				if w[2] ~= nil and hasbit(tear.TearFlags, w[2]) == false then
 					tear.TearFlags = tear.TearFlags + w[2];
 				end
 			end
 			for i, c in ipairs(wormList) do
-				if c[2] ~= nil and hasbit(tear.TearFlags, c[2]) and hasbit(player.TearFlags, c[2]) == false and player:HasTrinket(c[1]) == false  then
+				if c[2] ~= nil and hasbit(tear.TearFlags, c[2]) then-- and (hasbit(wormtagsdata, c[2]) == false or player:HasTrinket(c[1]) == false)
 					tear.CollisionDamage = tear.CollisionDamage * 1.1
 				end
 			end
@@ -2239,6 +2258,22 @@ function mod:MC_POST_PROJECTILE_INIT(projectile)
 	if projectile:GetData().spawned_by_reflector then
 		if not hasbit(projectile.ProjectileFlags, ProjectileFlags.GHOST) then projectile.ProjectileFlags = projectile.ProjectileFlags + ProjectileFlags.GHOST end
 	end
+	if projectile.SpawnerEntity == nil then
+		local maxDistance = 9999999
+		local closest = nil
+		for _, ent in pairs(Isaac.GetRoomEntities()) do
+			if ent ~= nil and (ent:IsActiveEnemy(true) and ent.Position:Distance(projectile.Position) < maxDistance) then
+				maxDistance = ent.Position:Distance(projectile.Position)
+				closest = ent;
+			end
+		end
+		if closest ~= nil then
+			local data = closest:GetData()
+			if data.wormcan ~= nil and not hasbit(projectile.ProjectileFlags, data.wormcan) then
+				projectile.ProjectileFlags = projectile.ProjectileFlags + data.wormcan
+			end
+		end
+	end
 	--[[
 	if Isaac.GetPlayer(0):HasCollectible(deal_item) then
 		if not hasbit(projectile.ProjectileFlags, ProjectileFlags.GREED) then
@@ -2298,7 +2333,7 @@ local activelimbolist = {
 	{metaldetect_item, 1},
 	{runestone_item, 5}
 }
-local activelimbotracker = {}
+activelimbotracker = {}
 function mod:MC_POST_PICKUP_SELECTION(pickup, Variant, SubType)
 	local player = Isaac.GetPlayer(0)
 	local room = Game():GetRoom()
@@ -2802,7 +2837,7 @@ function mod:MC_USE_ITEM(item, rng)
 		
 	end
 end
-
+--wormtagsdata = 0
 function mod:MC_EVALUATE_CACHE(player,cacheFlag)
 	if cacheFlag == CacheFlag.CACHE_FAMILIARS then
 		for _, ent in pairs(Isaac.GetRoomEntities()) do
@@ -2862,13 +2897,14 @@ function mod:MC_EVALUATE_CACHE(player,cacheFlag)
 		end
 	elseif cacheFlag == CacheFlag.CACHE_DAMAGE then
 		updatefiredel = true
-		if player:HasCollectible(wormbox_item) then
+		--[[if player:HasCollectible(wormbox_item) then
 			for i, c in ipairs(wormList) do
 				if player:HasTrinket(c[1]) or c[2] ~= nil and hasbit(player.TearFlags, c[2]) then
 					player.Damage = player.Damage * (1.0 + (0.1 * player:GetTrinketMultiplier()))
 				end
 			end
-		end
+			wormtagsdata = player.TearFlags
+		end]]--
 		if player:HasCollectible(prize_item) then
 			for i=1, player:GetCollectibleNum(prize_item) do
 				player.Damage = math.max(player.Damage - 1, math.min(player.Damage, 2))
@@ -3067,8 +3103,22 @@ function mod:MC_POST_NPC_INIT(ent)
 			ent:Remove()
 		end
 	end
+	local player = Isaac.GetPlayer(0)
+	if player ~= nil and player:HasCollectible(wormcan_item) then
+		if ent:IsChampion() or rng:RandomFloat() < 0.2 then
+			local data = ent:GetData()
+			data.wormcan = WeightedRNG({
+				{ProjectileFlags.WIGGLE, 3},
+				{ProjectileFlags.BOOMERANG, 1},
+				{ProjectileFlags.SINE_VELOCITY, 3},
+				{ProjectileFlags.MEGA_WIGGLE, 3},
+				{ProjectileFlags.SAWTOOTH_WIGGLE, 2}
+			}, rng)
+		end
+	end
 end
 
+limbochestactivepool = {}
 
 local function OpenLimboChest(ent, player)
 	local sprite = ent:GetSprite()
@@ -3084,11 +3134,12 @@ local function OpenLimboChest(ent, player)
 		reward = "GoldBomb"
 	else
 		local limboChestRewards = {
-			{"Item", 18},
+			{"Item", 16},
 			{"Trinket", 25},
 			{"Hearts", 10},
 			{"Cyclopia", 5},
 			{"Maw", 5},
+			{"Dople", 3},
 			{"Bombs", 14},
 			{"Spiders", 10},
 			{"BigBomb", 12},
@@ -3096,6 +3147,9 @@ local function OpenLimboChest(ent, player)
 			{"GoldBomb", 1},
 			{"Rune", 0}
 		}
+		if (#limbochestactivepool > 0) then
+			limboChestRewards[#limboChestRewards+1] = {"ActiveItem", 2}
+		end
 		if not player:HasCollectible(compass_item) then
 			limboChestRewards[#limboChestRewards+1] = {"Compass", 3}
 		end
@@ -3116,6 +3170,10 @@ local function OpenLimboChest(ent, player)
 	
 	if reward == "Item" then
 		Isaac.Spawn(EntityType.ENTITY_PICKUP, 100, GetLimboItem(), ent.Position, Vector(0, 0), ent)
+	elseif reward == "ActiveItem" then
+		local r = rng:RandomInt(1,#limbochestactivepool)
+		Isaac.Spawn(EntityType.ENTITY_PICKUP, 100, limbochestactivepool[r], ent.Position, Vector(0, 0), ent)
+		table.remove(limbochestactivepool, r)
 	elseif reward == "Compass" then
 		Isaac.Spawn(EntityType.ENTITY_PICKUP, 100, compass_item, ent.Position, Vector(0, 0), ent)
 	elseif reward == "Trinket" then
@@ -3146,6 +3204,9 @@ local function OpenLimboChest(ent, player)
 		local newent = Isaac.Spawn(26, 0, 0, pos, ent.Velocity, nil)
 		SetUpMaw(newent)
 		--newent.Mass = newent.Mass * 3
+	elseif reward == "Dople" then
+		local pos = room:FindFreePickupSpawnPosition(ent.Position, 6, true)
+		local newent = Isaac.Spawn(53, 11340, 0, pos, ent.Velocity, nil)
 	elseif reward == "Bombs" then
 		player:UseCard(Card.CARD_TOWER)
 	elseif reward == "Spiders" then

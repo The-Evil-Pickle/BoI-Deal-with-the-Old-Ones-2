@@ -75,4 +75,8 @@
 	<entity anm2path="limbo_kaleidoscope.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="2" friction="1.2" id="3" name="Reflector Fam" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="11344">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+    <entity anm2path="053.000_limbo dople.anm2" gridCollision="walls" reroll="false" baseHP="20" boss="0" champion="1" collisionDamage="0" collisionMass="10" collisionRadius="13" friction="1" id="53" name="Dopl" numGridCollisionPoints="12" shadowSize="14" stageHP="5" shutdoors="false" variant="11340" portrait="40" tags="noreroll">
+		<bestiary transform="0,0,1" anim="WalkVert" overlay="HeadIdle" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
 </entities>

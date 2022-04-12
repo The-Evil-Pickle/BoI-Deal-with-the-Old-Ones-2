@@ -50,6 +50,68 @@ Randomly replaces each heart/key/bomb/coin pickup in the room with blue flies, b
 Consumes all pedestal items in the room, giving a random stat boost for each.
 Destroys held trinkets, and perminantly applies thier effects to the player (smelter effect).
 
+Use Item (limbo): Faded D6
+"Some sides are worn down"
+5-room charge.
+1/6 chance to re-roll all pedestal items in room.
+1/6 chance to re-roll one random pedestal item in room.
+1/6 chance to re-roll and obscure all pedestal items in room.
+1/6 chance to re-roll one random pedestal item into an item from the limbo pool.
+1/6 chance to re-roll all pickups in the room.
+1/6 chance to destroy one random pedestal item in the room and spawn 6 blue spiders where it was.
+
+Use Item (limbo): Dead Salt Scrolls
+"Random Change"
+3-room charge.
+Randomly fires the effect of one of the following active items:
+- Fortune Cookie
+- Damocles (rarely)
+- Eternal D6
+- Genesis (very rarely)
+- Death Cirtificate (rarely)
+- Yuck Heart
+- Magic Skin
+- Abyss
+- Lemegeton
+- Keeper's Box
+- Spindown Dice
+- Book of Virtues
+- The Poop
+- Book of Revelations
+- We need to go Deeper
+- Deck of Cards
+- Book of Sin
+- Mom's Pill Bottle
+- Guppy's Paw
+- IV Bag
+- Prayer Card
+- Crystal Ball
+- D20
+- Portable Slot
+- Converter
+- D100 (very rarely)
+- D4 (very rarely)
+- Pandora's Box (rarely)
+- Diplopia
+- Wooden Nickel
+- D12
+- D8 (rarely)
+- Teleport 2.0
+- Glowing Hour Glass
+- Mine Crafter
+- D7
+- Mom's Box
+- D1
+- Void
+- Smelter
+- Dataminer
+- Clicker (rarely)
+- Crooked Penny
+- Dull Razor
+- Potato Peeler
+- Mystery Gift (rarely)
+- Coupon
+- Sacrificial Altar
 
 Item (limbo): Skull's Heart
 "More health"
@@ -65,16 +127,32 @@ Spawns two limbo chests at the start of each floor.
 Limbo chests have a higher chance of containing golden keys or golden bombs.
 Normal chests have a small chance to be replaced by limbo chests.
 
-Item (limbo): Can of worms
+Item (limbo): Worm Farm
 "Worms = Power"
 Tears have a small chance to have one or more random worm effects.
 Tears deal more damage for each worm effect they have.
 Trinkets are more likely to spawn as worms.
 
-Item: wip
-Taking damage in sacrifice rooms has a high chance to spawn a red chest or limbo chest.
-Spiked limbo chest
-curse room pool
+Item (limbo): Opened Can of Worms
+"Where did they go?"
+Some enemies spawn with a worm trinket effect that is applied to all their shots.
+Always applies to champions.
+
+Familiar (limbo): Creeper Baby
+"Destructive Buddy"
+Runs up to tinted rocks and explodes.
+Each pickup dropped by rocks this familiar destroys has a 50% chance of being destroyed.
+Respawns upon entering a new room.
+
+Item (Limbo): Hall Pass
+"Bosses leave things behind"
+Items from the boss pool are added to the treasure room, secret room, shop, and gold chest item pools.
+Bosses have a chance to drop a random pickup when killed.
+Bosses outside of boss rooms have a chance to spawn as one of their champion variants.
+
+Item (Limbo): Disorder
+"Mini-chaos"
+Pickups spawn as any random pickup, regardless of origin.
 
 Trinket (limbo): Red-hot Nail
 "Ouch!"
