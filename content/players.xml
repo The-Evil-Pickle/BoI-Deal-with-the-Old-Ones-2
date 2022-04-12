@@ -1,0 +1,10 @@
+<players root="gfx/characters/costumes/" 
+         portraitroot="gfx/ui/boss/" 
+         nameimageroot="gfx/ui/boss/" 
+         bigportraitroot="gfx/ui/stage/">
+	<player name="Jahaziel" skin="jahaziel.png" hp="4" armor="2"
+          nameimage="playername_jahaziel.png" 
+          portrait="playerportrait_jahaziel.png" 
+          bigportrait="playerportraitbig_jahaziel.png"
+          skinColor="-1" />
+</players>

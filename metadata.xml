@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <name>Limbo Deals 2</name>
+    <directory>limbo deals 2</directory>
+    <description>This mod adds a third kind of deal room that can appear after boss fights: a Deal with the Old Gods. It won’t replace devil or angel deals - it appears when no other deal opens, or in rare cases alongside one of the other deals.
+
+Items in these rooms are free, and you can take as many as you like. The catch is that the items in Limbo rooms come with both a positive and negative effect.
+
+Taking items from deals with the old gods won’t affect your chances of getting deals with the devil or angel later in the run.
+
+[SPOILERS] Full details on everything this mod adds: https://docs.google.com/document/d/12vBC9RxfrPelNG9QVQ3IkC_p-sK-lwhybS7lQ6H4UYU/edit?usp=sharing</description>
+    <version>1.0</version>
+    <visibility>Private</visibility>
+    <tag id="Lua"/>
+    <tag id="Items"/>
+    <tag id="Active Items"/>
+    <tag id="Trinkets"/>
+    <tag id="Pickups"/>
+    <tag id="Player Characters"/>
+    <tag id="Familiars"/>
+    <tag id="Babies"/>
+    <tag id="Rooms"/>
+    <tag id="Enemies"/>
+    <tag id="Bosses"/>
+    <tag id="Hazards"/>
+    <tag id="Tweaks"/>
+    <tag id="Music"/>
+</metadata>

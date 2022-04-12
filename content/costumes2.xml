@@ -1,0 +1,5 @@
+<costumes anm2root="gfx/characters/">
+	<costume anm2path="costume_wings_of_icarus.anm2" type="none" isFlying="true" />
+	<costume anm2path="costume_red_brush.anm2" type="none" />
+	<costume anm2path="costume_confusion.anm2" type="none" hasOverlay="true" />
+</costumes>

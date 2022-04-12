@@ -1,0 +1,303 @@
+
+Tally thus far:
+16 new passive items
+3 new active items
+3 new trinkets
+1 new pickup
+1 new curse
+1 new character
+
+Wings of Icarus:
+*Gives flying
+*+0.1 speed
+*Chance for tears to be flaming tears, which do only 0.1 damage but set enemies on fire (12% chance, increased by player luck. chance drops to 0 on proc, then builds back up over the next few shots)
+*Most fireplaces will shoot at the player
+*Chance for rocks to be replaced with hostile fireplaces (decreased by player luck)
+ 
+Sandals:
+*+1.0 speed
+*Player speed increases rapidly to a high cap, beyond player's actual speed stat
+*When going fast enough, the player is protected from taking damage (goes on cooldown after activating)
+*Player's movement becomes harder to control the faster they go
+
+Confusion:
+*Tears have a chance to take on random and chaotic movement patterns. Tears that do this also confuse hit enemies (usually. there is a chance for other status effects to be applied instead of or along side confusion).
+*Chance of this happening increases as normal tears are fired, then resets when a confusion tear fires.
+*Chance increases by 10% X the player's luck.
+
+Rabbit's Paw:
+*+2 luck
+*+0.025 speed
+*If the player's luck is still below 0 after the luck bonus is applied, grants additional +1 luck.
+*Common pickups (hearts, bombs, keys, coins) have a high chance to be whatever the player would find least useful (usually whatever they have the most of)
+*Chance of this happening is dependent on how much of each collectible the player has, and decreases slightly based on luck.
+*Chests (except eternal chests) have a higher chance of being a kind of chest that is opened using a collectible the player has none of, or has less of than their other collectibles.
+*Increased chance of chests spawning as a red chest when the player is low on all collectibles.
+*Small chance for chests to spawn as limbo chests, increases when the player is low on all collectibles.
+
+Cursed Map:
+*Reveals room layout (treasure map effect)
+*Once the player has visited either the treasure or boss room on the floor, reveals all special rooms (compass effect)
+*Once the player has visited either the secret or super secret room on the floor, reveals all secret and super secret rooms (blue map effect)
+*Very high chance of curses appearing on floors that wouldn't otherwise have them
+*Chance of this effect not causing a curse is increased by player luck
+*Curse of the maze becomes more common than other curses, while curse of the unknown and blind become less common
+*Curse of the Tomb can appear while the player has this item. It is MUCH more common than the other curses.
+*Curse of the Lost will always be replaced with Curse of the Tomb.
+
+Broken Mirror:
+*-5 luck
+*Curse of the Tomb has a chance to appear while the player has this item, but it is rarer than other curses (unless the player also has Cursed Map).
+*Items will randomly be replaced with better items.
+*For this effect, all items have been ranked into 40 tiers based on community opinion.
+*This effect ignores item pools, so this item causes a similar effect as what Chaos does.
+*How much better the new item is from the original one is random, but dependent on luck.
+*Low-tier items have better chances of going up multiple tiers when replaced than already-high-tier items do.
+*Will not replace modded items or items from some of the most recent booster packs (no data for what tier those items are).
+*Replaces all compatible items in treasure rooms, 50% chance for compatible items sold in shops, 50% chance for compatible items in boss rush.
+
+Broken Compass:
+*Greatly increases chance of encountering a limbo room after a boss fight
+*Chance for limbo room opening can never drop below 20% after all other modifiers are accounted for - even if an angel or devil room opened
+*An open limbo room door will always remain open when the player exits and re-enters the boss room.
+*Note: Unlike the other items added by this mod, the Broken Compass is found outside the limbo room; it is in the curse room and red chest item pools.
+ ^(It can still appear in limbo rooms, but it has a much lower chance to appear than other items do)
+
+Leaking Battery:
+*Active items activate twice (Car Battery effect)
+*For active items with >1-room charge, recharges active item by 1 bar after use (9-Volt effect)
+*Activates active items with 1-room charge 3 times instead of 2
+*Effect does not stack with 9-Volt, but does stack with Car Battery (active item activates four times!)
+*Each time the player uses their active item, there is a chance for a random side effect to occur. Possible side effects are, from most to least common:
+ -Player takes 1 full heart of damage
+ -Player is teleported to a random room on the floor
+ -Mom's foot randomly stomps the room (high priestess effect)
+ -Screen becomes pixelated briefly
+ -A random curse is added to the floor. Curse of Darkness is the most common one to get from this effect, while Curse of the Blind, Curse of the Unknown, and Curse of the Tomb are the rarest.
+
+Participation Award:
+*+1 full soul heart on pickup
+*+0.1 speed
+*+1 luck
+*+0.1 shot speed
+*+1 range
+*-1 fire delay (increases fire rate)
+*-1 damage
+*Stacks with itself
+*This item is never removed from the limbo deal pool. Instead, if the player has already collected it, it simply becomes much rarer than other items.
+
+Red Brush:
+*+1 heart of max health
+*In active rooms, the walls will periodically start bleeding.
+*When this event starts, all enemies in the room take damage equal to ~15% of the player's Damage stat (slight random variance). Enemies cannot die from this damage.
+*Near the end of the event, damaging creep is placed around the edges of the room.
+*Creep deals 1 damage in chapters 1-3, and 2 damage in chapters 4+.
+*Once this event ends, if the player has not taken damage in the room, a heart will spawn.
+*Heart spawned is a half heart in chapters 1-3, a full heart in chapter 4, a soul heart in cathedral/chest, and a black heart in sheol/dark room.
+*Only 1 heart can spawn per room by this effect.
+*Activates less frequently in boss rooms.
+*Never activates in thin rooms.
+
+QMK>?:
+*At the start of each new floor, the player gets a random item from the limbo item pool.
+*Items given by QMK>? are removed after 2 floors.
+
+Red Sea:
+*Piercing shot
+*Permanent wiggle worm effect
+*Damage is divided by 5
+*Tear delay is divided by 5 (and rounded to nearest integer)
+*-0.1 Shot speed
+*+1.25 Range
+
+Empty Sack:
+*Familiar
+*Drops either Perthro or Store Credit on first clear of floor
+*Each time a common pickup spawns, there is a chance it will be replaced with a fake one.
+^Fake pickups deal damage to the player on touch.
+^Fake pickups always look a bit different than the normal pickup does.
+^When a pickup is replaced with a fake due to this effect, Empty Sack will drop a real copy of the pickup later.
+
+Contract with Ultra Greed:
+*Gives 15 coins on pickup
+*Increased chance for pennies to drop as double pennies
+*Most damage dealt to the player will cause them to lose coins, and drop coins <= the amount lost on the floor (greed projectile effect).
+
+Strange Kaleidoscope:
+*Familiar
+*When an enemy projectile hits it, it fires 3 spectral tears back at the enemy.
+*When a player tear hits it, it fires a projectile back at the player.
+^This effect only triggers in active rooms and limbo.
+*Player tears that pass through this have a chance to gain a random effect.
+^Affected by player luck. Becomes 100% if the player has the BFFS! item.
+
+Quantum Rock:
+*-0.5 Damage
+*All friendly projectiles and beams spawn are given +0.5 damage on spawn
+
+Tootless Key:
+*Spawns 2 limbo chests in the first room of each floor.
+*All limbo chests have a much higher chance of containing golden keys or golden bombs.
+*Limbo chests will sometimes appear in place of other chests.
+
+Ancient's Head:
+*Active item
+*2-room charge
+*Not in the limbo room item pool. Has a chance to drop from angel bosses killed in limbo rooms.
+*On use, fires shots in 8 directions (tammy's head effect), but gives fired shots GodHead.
+
+Black Runestone:
+*Active item
+*Single-use
+*Not in the limbo room item pool. Has a chance to drop from angel bosses killed in limbo rooms.
+*On use, activates the effects of Smelter, Sacrificial Alter, and Black Rune (in that order).
+
+Dead Metal detector:
+*Active item
+*3-room charge
+*Has a small chance to drop from angel bosses killed in limbo rooms.
+*On use, spawns a chest at a random position in the room. Usually spawns a red or limbo chest.
+*When first picked up, it has no charge.
+
+Dead Beetle:
+*Trinket
+*Adds Curse of the Tomb to the curse pool.
+*Makes Curse of the Tomb restart rooms less frequently.
+*Rooms restarted by Curse of the Tomb have a chance to drop pickups (this happens 3 times per floor maximum).
+*Increases chance of limbo doors appearing after boss fights by 50% when Curse of the Tomb is active, and by 10% when it is not.
+
+Ancient Pebble:
+*Trinket
+*Replaces all chests with limbo chests
+*If the player also has the left hand (due to an item that lets them hold multiple trinkets), each chest has a 50% chance to be a red chest and a 50% chance to be a limbo chest.
+
+Red-Hot Nail:
+*Trinket
+*Take 1 damage on pickup
+*Tears have a slight chance to gain piercing, knockback, burn, and explosive.
+*Chance is 100% for tears fired while the player is invincible.
+==========================================
+Interactions / additions to existing items
+
+Duality: Allows limbo doors to commonly spawn alongside angel and devil doors
+Missing Poster: Makes limbo doors more likely to appear
+==========================================
+Curse of the Tomb: 
+*Each time the player enters a completed room, there is a 33% chance for that room to be reset (like D7 effect). The chance of this effect triggering is increased each room after 3 have failed to trigger it, and is decreased by player luck.
+*No pickups of any kind will drop in rooms restarted by Curse of the Tomb.
+*Curse of the Tomb will never appear under normal circumstances.
+*If the player has Broken Mirror or Dead Beetle, Curse of the Tomb can appear just like any other curse (but it is a bit more rare than the vanilla ones).
+*If the player has Cursed Map, Curse of the Tomb will appear VERY commonly.
+*Curse of the Tomb also has a small chance to be added to the floor by the curse-adding effect of Leaking Battery.
+==========================================
+Limbo Chests:
+Limbo chests are new chests that can spawn in limbo. They can contain the following:
+-An item from the limbo item pool (commonly)
+-A trinket from the limbo trinket pool (very commonly)
+-Multiple red/half/blended hearts
+-A limbo cyclopia (rarely)
+-A limbo maw (rarely)
+-A bunch of troll bombs
+-1-3 spiders
+-A mega troll bomb
+-Golden key (very rarely)
+-Golden bomb (very rarely)
+-Limbo entrance (very rarely when not already in limbo)
+
+==========================================
+How unlocking limbo doors works:
+After a boss is defeated, there is a chance for a door to a limbo room to open.
+The base for this chance is 100%, but it is modified by a large number of conditions.
+*If the number of collectibles the player has is more than 2X the current floor number, chance of a limbo door opening is reduced by 10% for each item over the limit.
+*If a devil or angel room opened after this boss fight, chance of a limbo door opening is reduced by 150%; unless the player has Duality, in which case it is increased by 20%.
+*Chance is increased by 10% per point of luck the player has (negative luck will decrease the chance, but never by more than 25%)
+*Chance is increased by 10% for each limbo-exclusive item the player has (except broken mirror, which increases chance by 20% instead to counterbalance the negative luck, and rabbit's paw, which gives nothing to counterbalance the positive luck)
+*Chance is increased by 5% for each of Chaos, Cursed Eye, or Curse of the Tower the player has
+*Chance is increased by 25% if the player is holding the missing poster trinket
+*Chance is increased by 10% if the player is holding the Dead Beetle trinket, up to 50% if Curse of the Tomb is also active
+*Chance is increased by 5% if the player is holding the Ancient Pebble
+*Chance is increased by 10% if Curse of the Lost is active
+*Chance is reduced by 75% if the player is on the first floor
+*Chance is reduced by 30% if the player is on the second floor
+*Chance is reduced by 100% if the player is on the past the ninth floor
+*Chance is reduced by 50% if the player has the dark angel transformation
+*Chance is reduced by 25% if the player has the light angel transformation
+*Chance is reduced by 25% if the player has the guppy transformation
+*Chance is reduced by 30% if the player is playing as Apollyon
+*Chance is reduced by 10% if the player is playing as Isaac
+*On the first 2 floors, if the player is playing as Isaac or Azazel, chance is reduced by 15%
+*Chance is increased by 100% and cannot total to below 20% if the player has the Broken Compass
+All numbers listed above are additive, not multiplicitive.
+The limbo room door may or may not stay open when the player leaves the boss room and comes back.
+Chance of the door remaining open is half the chance of it opening in the first place. If the player has the Broken Compass, it always remains open.
+===============================================
+
+
+
+
+
+Limbo Item Pool:
+Cursed Eye
+Curse of the Tower
+Chaos (removed from pool if player has Broken Mirror)
+Bob's Brain (rarely)
+Broken Watch (rarely)
+Wings of Icarus
+Sandals
+Confusion
+Rabbit's Paw
+Cursed Map
+Broken Mirror
+Participation Award
+Leaking Battery
+Red Brush
+QMK>? (rarely)
+Broken Compass (rarely)
+Pickpocket (if the "Pickpocket" mod is installed)
+Satan's Contract (if the "Alphabirth Pack 1" mod is installed)
+
+If the player collects enough items that the limbo item pool is reduced to less than 5 items (not counting Participation Award),
+then items from a secondary item pool will be added to the primary one.
+Limbo Secondary Item Pool:
+My Reflection
+Tiny Planet (very rarely)
+Experimental Treatment
+Soy Milk (very rarely)
+Eve's Mascara
+Duality (rarely)
+Fire Mind (rarely)
+The Wiz
+Marked
+Number One
+Champion Belt (rarely)
+Cursed D6 (rarely, if the "11 new items!" mod is installed)
+Birth Control (rarely, if the "Alphabirth Pack 2" mod is installed)
+
+Limbo Trinket Pool:
+Broken Remote
+Purple Heart
+Ring Worm (rarely)
+Hook Worm (rarely)
+Mom's Toenail
+Cursed Skull
+Tick
+Left Hand
+Rainbow Worm
+Super Magnet
+Error
+Ouroboros Worm
+Missing Poster (commonly)
+Dead Beetle (commonly)
+Ancient Pebble (commonly)
+
+Hearts spawned in limbo will always be replaced with red heart pickups (or limbo chests w/ 33% chance)
+Chests spawned in limbo will always be limbo chests
+
+==========================================
+If the statue in Limbo is destroyed, one of the two angels will spawn.
+Angels in limbo rooms work differently than those in angel rooms. The differences are:
+-300 hitpoints (angel room bosses have 400)
+-Uriel spawns with a white cyclopia champion
+-Gabriel spawns random cyclopia champions rather than angelic babies
+If the player has a key piece, angels in limbo drop the other one.
+If the player has no key piece, or has completed the key, angels have a 50% chance to drop a limbo active item, and a 50% chance to drop a random limbo item + trinket.

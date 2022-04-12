@@ -1,0 +1,28 @@
+<items gfxroot="gfx/items/" version="1">
+	<passive cache = "speed flying" description="Speed up + flying + everything burns" gfx="Collectibles_Wings_of_Icarus.png" name="Wings of Icarus" />
+	<passive cache = "speed" description="Speed waaaaay up" gfx="Collectibles_Sandals.png" name="Sandals" />
+	<passive cache = "" description="Confusing tears" gfx="questionmark2.png" name="Confusion" />
+	<passive cache = "speed luck" description="Luck up + curse of plenty" gfx="Collectibles_Rabbits_Paw.png" name="Rabbit's Paw" />
+	<passive cache = "" description="Your position is known" gfx="Collectibles_Cursed_Map.png" name="Cursed Map" />
+	<passive cache = "luck" description="Luck down...?" gfx="Collectibles_Broken_Mirror.png" name="Broken Mirror" />
+	<passive cache = "" description="Leads to nowhere" gfx="Collectibles_Broken_Compass.png" name="Broken Compass" />
+	<passive cache = "" description="Dangerously powerful active items" gfx="Collectibles_Leaking_Battery.png" name="Leaking Battery" />
+	<passive cache = "luck speed damage shotspeed firedelay range" soulhearts="2" description="(Almost) all stats up!" gfx="Collectibles_Participation_Award.png" name="Participation Award" />
+	<passive cache = "" maxhearts="2" description="Blood on the walls" gfx="Collectibles_Red_Brush.png" name="Red Brush" />
+	<passive cache = "damage firedelay tearflag" description="Multieffect" gfx="questionmark3.png" name="QMK>?" />
+	<active name="Ancient's Head" description="Omnicience" gfx="Collectibles_Ancient_Head.png" maxcharges="2"/>
+	<passive cache = "damage firedelay shotspeed range tearflag" description="Flood of tears" gfx="Collectibles_Red_Sea.png" name="Red Sea" />
+	<familiar description="Look out for fakes!" gfx="Collectibles_Limbo_Sack.png" name="Empty Sack" />
+	<familiar description="Reflects colors" gfx="Collectibles_S_Scope.png" name="Strange Kaleidoscope" />
+	<passive name="Contract with Ultra Greed" gfx="Collectibles_Contract_w_Greed.png" description="Wealth brings thieves" coins="15" />
+	<passive name="White Belt" gfx="Collectibles_White_Belt.png" description="DMG up + eternity" cache = "damage"/>
+	<passive description="Intensifying Madness" gfx="questionmark.png" name="Tunnel Vision"/>
+	<passive cache = "damage" description="Damage Down + Damage Up" gfx="Collectible_The_Quantum_Rock.png" name="Quantum Rock"/>
+	<passive description="Treasure Awaits" gfx="Collectible_Toothess_Key.png" name="Toothless Key"/>
+	<passive description="Worms = Power" gfx="questionmark.png" name="Worm Box"/>
+	<active name="Black Runestone" description="Sacrifice Everything" gfx="questionmark.png" maxcharges="0"/>
+	<active name="Dead Metal Detector" description="Finds Treasure" gfx="questionmark.png" maxcharges="3"/>
+	<trinket description="Cursed" gfx="trinket_dead_beetle.png" name="Dead Beetle" />
+	<trinket description="Cursed" gfx="trinket_ancient_pebble.png" name="Ancient Pebble" />
+	<trinket description="Ouch!" gfx="questionmark.png" name="Red-Hot Nail" />
+</items>

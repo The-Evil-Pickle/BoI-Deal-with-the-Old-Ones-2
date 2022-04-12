@@ -1,0 +1,88 @@
+JAHAZIEL REWORK
+Health: 2 red hearts, 1 bone heart
+Damage: 4.5
+Tear Delay: 13
+Shot Speed: 1
+Range: 23.75
+Speed: 1
+Luck: 0
+Starting Pickups: none (effectivley 1 golden key and 1 golden bomb; see special #3)
+Starting Items: Toothless Key
+Special:
+*Tears that deal more damage to an enemy than the enemy’s HP will continue on with the remainder (like they do with Polyphemus).
+*Increased base chance for limbo deals to open.
+*The two chests spawned by Toothless Key at the start of the first floor always drop one golden key and one golden bomb.
+*Lower chance of getting golden keys or golden bombs from limbo chests (with the excpetion of the above).
+*Normal chests sometimes spawn as limbo chests (stacks with Toothless Key's effect).
+
+
+
+
+
+
+
+THINGS TO ADD TO LIMBO POOLS:
+Almond Milk (Primary, common)
+False PHD (Primary, common)
+Heartbreak (Primary, uncommon)
+Contract from Below (Secondary, common)
+Blood Oath (Secondary, uncommon)
+Vanishing Twin (Secondary, rare)
+TMTRAINER (Secondary, rare)
+
+Exploded Firecracker(Trinket, uncommon)
+'M (Trinket, very rare)
+Apple of Sodom (Trinket, uncommon)
+Old Capacitor (Trinket, uncommon)
+Panic Button (Trinket, rare)
+Blue Key (Trinket, rare)
+Torn Pocket (Trinket, common)
+Cursed Penny (Trinket, common)
+
+
+
+Use Item (limbo): Black Runestone
+"Sacrifice your surroundings"
+Single-Use.
+Destroys all rocks in the room (Rune of Hagalaz effect).
+Deals damage to all enemies in room, healing player by 1 for each.
+Randomly replaces each heart/key/bomb/coin pickup in the room with blue flies, blue spiders, a black heart, or an eternal heart.
+Consumes all pedestal items in the room, giving a random stat boost for each.
+Destroys held trinkets, and perminantly applies thier effects to the player (smelter effect).
+
+
+Item (limbo): Skull's Heart
+"More health"
+Drops a bone heart, rotten heart, and gold heart on pickup.
+Black hearts, Soul hearts, and Half-soul hearts no longer spawn normally.
+Half-hearts and Blended Hearts spawn less frequently.
+Red Hearts, Bone Hearts, Eternal Hearts, Rotton Hearts, and Double Hearts often drop when other hearts normally would, with nearly equal chance of each.
+Gold Hearts rarely replace penny rewards, and frequently replace nickel rewards.
+
+Item (limbo): Toothless Key
+"Treasure Awaits"
+Spawns two limbo chests at the start of each floor.
+Limbo chests have a higher chance of containing golden keys or golden bombs.
+Normal chests have a small chance to be replaced by limbo chests.
+
+Item (limbo): Can of worms
+"Worms = Power"
+Tears have a small chance to have one or more random worm effects.
+Tears deal more damage for each worm effect they have.
+Trinkets are more likely to spawn as worms.
+
+Item: wip
+Taking damage in sacrifice rooms has a high chance to spawn a red chest or limbo chest.
+Spiked limbo chest
+curse room pool
+
+Trinket (limbo): Red-hot Nail
+"Ouch!"
+Deals 1 damage to player when picked up.
+Tears have a very small chance to have piercing + nail + fire mind.
+Chance is 100% for tears fired while i-frames are active.
+
+
+Consumable (soul stone): Soul of Jahaziel
+Converts all chests in room to limbo chests.
+Spawns a limbo chest in each corner of the room. Chance for one of these to bring the player to the limbo room is higher than normal.

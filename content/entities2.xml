@@ -1,0 +1,78 @@
+<entities anm2root="gfx/" version="5">
+    <entity anm2path="1000.039_Heaven Door.anm2" baseHP="0" boss="1" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="8" friction="1" id="1000" name="Limbo Light" numGridCollisionPoints="0" shadowSize="0" stageHP="0" variant="11340">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="grid/door_limbo_in.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="1" friction="1" id="1000" name="Limbo Door" numGridCollisionPoints="0" shadowSize="0" stageHP="0" variant="11340" subtype="1">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="grid/door_limbo_out.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="1" friction="1" id="1000" name="Limbo Exit" numGridCollisionPoints="0" shadowSize="0" stageHP="0" variant="11340" subtype="2">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="1000.009_neutralstatue.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="1" friction="1" id="1000" name="Limbo Statue" numGridCollisionPoints="0" shadowSize="0" stageHP="0" variant="11341">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="limbochest.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="0.3" id="5" name="LimboChest" numGridCollisionPoints="24" shadowSize="28" stageHP="0" variant="11340">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="22" /> <!-- CHEST_OPEN -->
+    </entity>
+    <entity anm2path="limbochest.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="0.3" id="5" name="LimboChest (rigged A)" numGridCollisionPoints="24" shadowSize="28" stageHP="0" variant="11340" subtype="1">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="22" /> <!-- CHEST_OPEN -->
+    </entity>
+    <entity anm2path="limbochest.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="0.3" id="5" name="LimboChest (rigged B)" numGridCollisionPoints="24" shadowSize="28" stageHP="0" variant="11340" subtype="2">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="22" /> <!-- CHEST_OPEN -->
+    </entity>
+    <entity anm2path="limbochestopen.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="0.3" id="5" name="LimboChest (open)" numGridCollisionPoints="24" shadowSize="28" stageHP="0" variant="11341">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	    <preload-snd id="22" /> <!-- CHEST_OPEN -->
+    </entity>
+	<entity anm2path="limbo_sack.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Empty Sack" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="11340">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+	<entity anm2path="005.011_Heart.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="0">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.013_Heart (soul).anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="1">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.016_Black Heart.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="2">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.017_GoldHeart.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="3">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.018_Heart (halfsoul).anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="4">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.019_Blended Heart.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="5">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.021_Penny.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="6">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.031_Key.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="7">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.032_Golden Key.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="8">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.033_KeyRing.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="9">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.041_Bomb.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="10">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.042_Double Bomb.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="11">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.043_Golden Bomb.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="12">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="005.090_LittleBattery.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Trick Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="11344" subtype="13">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+	<entity anm2path="limbo_kaleidoscope.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="2" friction="1.2" id="3" name="Reflector Fam" numGridCollisionPoints="12" shadowSize="11" stageHP="0" variant="11344">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+</entities>

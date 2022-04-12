@@ -1,0 +1,4 @@
+<music root="music/">
+	<track name="Limbo Deal Room" path="Limbo_Static.ogg" loop="true" />
+	<track name="Limbo Deal Fight" path="The_Ancienct_One.ogg" loop="true" />
+</music>
